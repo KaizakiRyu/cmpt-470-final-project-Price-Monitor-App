@@ -17,6 +17,6 @@ def update_price(product_url=None):
         'provided_url': product_url
     }
 
-    response = requests.post('http://localhost:6800/schedule.json', data=data) #local test
-    # response = requests.post('http://scrapy:6800/schedule.json', data=data) #production
+    # response = requests.post('http://localhost:6800/schedule.json', data=data) #local test
+    response = requests.post('http://scrapy:6800/schedule.json', data=data) #production
     print(response)
