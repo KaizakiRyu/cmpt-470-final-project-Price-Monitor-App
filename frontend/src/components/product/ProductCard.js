@@ -90,11 +90,11 @@ class ProductCard extends Component {
 
             </Card.Header>
             <Card.Body>
-                <Card.Img 
+                {/* <Card.Img 
                     variant="top" 
                     src= {serverLocation + this.props.product.product_image}
                     alt = {this.props.product.product_name}
-                    style = {styles.image} />
+                    style = {styles.image} /> */}
                 <Card.Text>
                     {this.props.product.product_description}
                 </Card.Text>

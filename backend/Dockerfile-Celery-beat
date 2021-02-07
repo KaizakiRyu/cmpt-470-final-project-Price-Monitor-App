@@ -9,6 +9,7 @@ WORKDIR /backend
 
 # Bundle the source
 COPY . ./
+RUN chmod +x ./wait.sh
 
 # # install psycopg2 dependencies
 # RUN apk update \

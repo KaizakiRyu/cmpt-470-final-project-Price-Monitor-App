@@ -1,1 +1,40 @@
-[{"model": "api.product", "pk": 1, "fields": {"product_name": "AMD RYZEN 9 3900X", "product_description": "AMD RYZEN 9 3900X 12-Core 3.8 GHz (4.6 GHz Max Boost) Socket AM4 105W 100-100000023BOX Desktop Processor", "product_type": "CPU", "product_image": "3968e1fd-e93a-438e-ab0f-0e698e1eab75.jpg"}}, {"model": "api.product", "pk": 2, "fields": {"product_name": "Intel Core i9-9900K Coffee Lake", "product_description": "Intel Core i9-9900K Coffee Lake 8-Core, 16-Thread, 3.6 GHz (5.0 GHz Turbo) LGA 1151 (300 Series) 95W BX80684I99900K Desktop Processor Intel UHD Graphics 630", "product_type": "CPU", "product_image": "1804b517-9158-4221-8491-cb037f13c17c.jpg"}}, {"model": "api.product", "pk": 3, "fields": {"product_name": "MSI GeForce RTX 2070 SUPER", "product_description": "MSI GeForce RTX 2070 SUPER DirectX 12 RTX 2070 Super GAMING X 8GB 256-Bit GDDR6 PCI Express 3.0 x16 HDCP Ready SLI Support Video Card", "product_type": "GPU", "product_image": "7e4079f1-2d5d-49d4-9a12-8eb8d3712f9e.jpg"}}, {"model": "api.product", "pk": 4, "fields": {"product_name": "ASRock Radeon RX 5700", "product_description": "ASRock Radeon RX 5700 DirectX 12 RX 5700 CHALLENGER D 8G OC 8GB 256-Bit GDDR6 PCI Express 4.0 HDCP Ready Video Card", "product_type": "GPU", "product_image": "d7dcd599-49ce-4525-a177-3ca841b2d217.jpg"}}, {"model": "api.product", "pk": 6, "fields": {"product_name": "Patriot Viper Elite 16GB", "product_description": "Patriot Viper Elite 16GB (1 x 16GB) DDR4 2400MHz DRAM (Desktop Memory) CL16 1.2V Grey DIMM (288-pin) Extreme Performance Memory PVE416G240C6GY (Intel XMP, AMD Ryzen)", "product_type": "RAM", "product_image": "a367cc5f-40a4-47f9-87a5-908f9519ac3d.jpg"}}, {"model": "api.product", "pk": 7, "fields": {"product_name": "G.SKILL Ripjaws V Series 32GB", "product_description": "G.SKILL Ripjaws V Series 32GB (2 x 16GB) 288-Pin DDR4 SDRAM DDR4 3200 (PC4 25600) Desktop Memory Model F4-3200C16D-32GVK", "product_type": "RAM", "product_image": "fe31719a-59f0-425d-a0f2-be36f0142406.jpg"}}, {"model": "api.productlinkprice", "pk": 1, "fields": {"product": 1, "product_url": "https://www.newegg.ca/amd-ryzen-9-3900x/p/N82E16819113103", "product_price_curr": "619.99", "product_price_prev": null}}, {"model": "api.productlinkprice", "pk": 2, "fields": {"product": 2, "product_url": "https://www.newegg.ca/core-i9-9th-gen-intel-core-i9-9900k/p/N82E16819117957", "product_price_curr": "529.99", "product_price_prev": null}}, {"model": "api.productlinkprice", "pk": 3, "fields": {"product": 3, "product_url": "https://www.newegg.ca/msi-geforce-rtx-2070-super-rtx-2070-super-gaming-x/p/N82E16814137445", "product_price_curr": "789.99", "product_price_prev": null}}, {"model": "api.productlinkprice", "pk": 4, "fields": {"product": 4, "product_url": "https://www.newegg.ca/asrock-radeon-rx-5700-rx-5700-challenger-d-8g-oc/p/N82E16814930021", "product_price_curr": "469.99", "product_price_prev": null}}, {"model": "api.productlinkprice", "pk": 5, "fields": {"product": 6, "product_url": "https://www.newegg.ca/patriot-16gb-288-pin-ddr4-sdram/p/N82E16820225074", "product_price_curr": "90.99", "product_price_prev": null}}, {"model": "api.productlinkprice", "pk": 6, "fields": {"product": 6, "product_url": "https://www.bestbuy.ca/en-ca/product/patriot-viper-elite-performance-16gb-ddr4-2400mhz-desktop-memory-pve416g240c6gy/12421750", "product_price_curr": "109.99", "product_price_prev": null}}, {"model": "api.productlinkprice", "pk": 7, "fields": {"product": 7, "product_url": "https://www.newegg.ca/g-skill-32gb-288-pin-ddr4-sdram/p/N82E16820232091", "product_price_curr": "153.99", "product_price_prev": null}}, {"model": "api.wishlist", "pk": 1, "fields": {"product_id_list": null, "username": "testuser"}}]
+[
+    {
+        "model": "api.product", 
+        "pk": 2, 
+        "fields": 
+            {   "product_name": "Intel i9-9900K", 
+                "product_description": "Intel Core i9-9900K Coffee Lake 8-Core, 16-Thread, 3.6 GHz (5.0 GHz Turbo) LGA 1151 (300 Series) 95W BX80684I99900K Desktop Processor Intel UHD Graphics 630", 
+                "product_type": "CPU"
+            }
+    }, 
+    {   
+        "model": "api.productlinkprice", 
+        "pk": 3, 
+        "fields": 
+            {
+                "product": 2, 
+                "product_url": "https://www.newegg.ca/core-i9-9th-gen-intel-core-i9-9900k/p/N82E16819117957?Item=N82E16819117957", 
+                "product_price_curr": "529.99", 
+                "product_price_prev": "0"}
+    },
+    {
+        "model": "api.product", 
+        "pk": 4, 
+        "fields": 
+            {   "product_name": "RTX 2080 Ti", 
+                "product_description": "NVIDIA’s newest flagship graphics card is a revolution in gaming realism and performance.", 
+                "product_type": "GPU"
+            }
+    }, 
+    {   
+        "model": "api.productlinkprice", 
+        "pk": 5, 
+        "fields": 
+            {
+                "product": 4, 
+                "product_url": "https://www.newegg.ca/zotac-rtx-2080-ti-zt-t20810h-10p/p/N82E16814500450?Description=rtx%202080%20ti&cm_re=rtx_2080%20ti-_-9SIADDZB577971-_-Product", 
+                "product_price_curr": "2989.99", 
+                "product_price_prev": "0"}
+    }
+]

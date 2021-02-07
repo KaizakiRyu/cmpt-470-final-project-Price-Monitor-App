@@ -218,7 +218,7 @@ class UpdateProduct extends Component {
         newProduct.product_name = this.state.product.product_name
         newProduct.product_description = this.state.product.product_description
         newProduct.product_type = this.state.product.product_type
-        newProduct.product_image = this.state.product.product_image
+        // newProduct.product_image = this.state.product.product_image
         
         console.log("new Product: " , newProduct)
         var response = await RequestServer.updateProduct(token,this.state.product.id, newProduct)
@@ -252,16 +252,16 @@ class UpdateProduct extends Component {
         
     }
 
-    addImageHandler = (event) => {
-        var file = event.currentTarget.files[0]
-        console.log(file)
-        this.setState(prevState => ({
-            product: {
-                ...prevState.product,
-                product_image: file
-            }
-        }))
-    }
+    // addImageHandler = (event) => {
+    //     var file = event.currentTarget.files[0]
+    //     console.log(file)
+    //     this.setState(prevState => ({
+    //         product: {
+    //             ...prevState.product,
+    //             product_image: file
+    //         }
+    //     }))
+    // }
 
     render(){
         console.log("Rendering....")
@@ -300,14 +300,14 @@ class UpdateProduct extends Component {
                             <br/> 
                             <br/>
 
-                            <TextField name = "Picture" >
+                            {/* <TextField name = "Picture" >
                                 <input 
                                     type="file" 
                                     name="file" 
                                     onChange={(event) => this.addImageHandler(event)}
                                     accept="image/gif, image/jpeg, image/png"
                                     />
-                            </TextField>    
+                            </TextField>     */}
 
                             <br/> 
                             <InputLabel id="inputLabel">Product Type         

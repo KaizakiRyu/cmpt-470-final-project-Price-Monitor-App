@@ -42,8 +42,6 @@ class WishlistCard extends React.Component {
     }
 
     buttonHandler = (e) => {
-        //const { history } = this.props;
-        //console.log("history", history)
         this.props.history.push({pathname: '/product/' + this.props.id});
         window.location.reload()
     }
@@ -66,17 +64,14 @@ class WishlistCard extends React.Component {
                     className="float-right"
                     >Check Stock
                 </Button>
-                <p className="float-right" style={styles.pText}>
-                    Lowest Price: <span>{this.props.product_lowest_price_prev} CAD   </span>
-                    |   Current Price: <span>{this.props.product_lowest_price_curr} CAD</span>
-                </p>
+                <p className="float-right" style={styles.pText}>Lowest Price: <span>{this.props.product_lowest_price_curr} CAD</span></p>
                 </div>
             </Card.Header>
             <Card.Body>
-                <Card.Img
+                {/* <Card.Img
                     variant="top"
                     src= {'http://localhost:8000' + this.props.product_image}
-                    style = {styles.image} />
+                    style = {styles.image} /> */}
                 <Card.Text>
                     {this.props.product_description}
                 </Card.Text>

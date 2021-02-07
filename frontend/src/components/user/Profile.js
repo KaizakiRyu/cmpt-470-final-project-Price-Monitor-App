@@ -67,7 +67,6 @@ export default class Profile extends Component {
             })
 
         } else {
-            console.log(response);
             if (response !== null){
                 this.setState({errorMsg: response.data.detail});
             }
@@ -109,7 +108,6 @@ export default class Profile extends Component {
             })
 
         } else {
-            console.log(response);
             if (response !== null){
                 this.setState({errorMsg: 'Username updated to: '+response.data.username});
                 this.getUserDetails()
@@ -143,10 +141,8 @@ export default class Profile extends Component {
 
     async getUserDetails() {
         var token = localStorage.getItem('token');
-        console.log("Token: " , token);
         if (token !== null){
             var response = await RequestServer.getUsername(token)
-            console.log(response);
             if (response !== null){
                 this.setState({cur_username: response.data.username});
                 this.setState({cur_email: response.data.email});

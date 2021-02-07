@@ -187,9 +187,9 @@ class RequestServer extends Component {
             form_data.append('product_name', obj.product_name);
             form_data.append('product_description', obj.product_description);
             form_data.append('product_type', obj.product_type);
-            if (obj.product_image !== null){
-                form_data.append('product_image', obj.product_image);
-            }
+            // if (obj.product_image !== null){
+            //     form_data.append('product_image', obj.product_image);
+            // }
             
 
             var response = await axios.post(this.getServerLocation() + '/products/', form_data, {
@@ -205,12 +205,12 @@ class RequestServer extends Component {
         }
     }
 
-    srcToImg(src, fileName){
-        return (fetch(src)
-            .then(function(res){return res.arrayBuffer();})
-            .then(function(buf){return new File([buf], fileName, {type:"image/png"})})
-        );
-    }
+    // srcToImg(src, fileName){
+    //     return (fetch(src)
+    //         .then(function(res){return res.arrayBuffer();})
+    //         .then(function(buf){return new File([buf], fileName, {type:"image/png"})})
+    //     );
+    // }
 
     async updateProduct(token, id, obj) {
         try {
@@ -218,21 +218,21 @@ class RequestServer extends Component {
             form_data.append('product_name', obj.product_name);
             form_data.append('product_description', obj.product_description);
             form_data.append('product_type', obj.product_type);
-            console.log('hello')
-            console.log("obj: ", obj)
-            if (typeof obj.product_image === "string"){
-                //convert it into File Object
-                console.log('hi')
-                console.log(obj.product_image)
-                this.srcToImg(obj.product_image, obj.product_name)
-                .then(function(file){
-                    form_data.append('product_image', file);
-                })
-            }
-            else if (obj.product_image !== null){
-                //It's already a file object
-                form_data.append('product_image', obj.product_image);
-            }
+            // console.log('hello')
+            // console.log("obj: ", obj)
+            // if (typeof obj.product_image === "string"){
+            //     //convert it into File Object
+            //     console.log('hi')
+            //     console.log(obj.product_image)
+            //     this.srcToImg(obj.product_image, obj.product_name)
+            //     .then(function(file){
+            //         form_data.append('product_image', file);
+            //     })
+            // }
+            // else if (obj.product_image !== null){
+            //     //It's already a file object
+            //     form_data.append('product_image', obj.product_image);
+            // }
             
             var response = await axios.put(this.getServerLocation() + '/products/' + id , form_data, {
                 headers: {

@@ -1,5 +1,31 @@
-# Running locally
+# Comments about the project
+## Working features
+- Register/Login (User must login to see the products)
+- Profile page (User can update his/her username, password)
+- Retrieve product info, user info, comment info for every product and the wishlist info
+- Add/Edit/Update/Delete Product 
+- Add/Edit/Update/Delete URL of the product
+- The lowest price of the product is shown (based on URLs' prices, default will be N/A)
+- Web scraping on lowest price (although it takes 10-15 seconds to update the price and it will update the price again for every 30 minutes)
 
+## Not-working features
+- Adding/Update product image (It was working locally but we had to remove it when deploying on Docker because of the write permission issue)
+- Push notification through web UI and email to notice user when the price is dropped
+
+## Other useful notes
+- When signing up, user will have full privillege to the system since we did not implement admin, moderator and user role
+- User is able to update the price manually but the price will be overwritten if the scraper finds out the actual price.
+- Users can only delete their own comments but not someone else.
+- The backend is protected against SQL Injection, XSS and CSRF attack. 
+- The UI is responsive to various screen.
+- Every requests except for register and login requests will require token key which provided from the server.
+- Simple password/Common password is not accepted (user: admin, password: admin is not accepted).
+
+## Accessible URL
+- Navigate to localhost:3000 to see the website.
+- Hidden link: localhost:3000/product/all to see all the products
+
+# Command for Running locally
 ## Prerequisite
 - python3
 - pip
@@ -84,17 +110,3 @@ Need to modify these file accordingly (uncomment and comment the correct line)be
 - Run command: `docker-compose build && docker-compose up`
 - Navigate to http://localhost:3000 to see the frontend
 - When finish using the app, run command : `docker-compose down && docker system prune -f` to destroy the docker image
-
-# Project Checkpoint
-Completed Features:
-- User can login, logout, register using the web UI. 
-- User can update information such as username, password.
-- User can see privated pages which are visible after login.
-- User can only fetch their own information with provided token from the server.
-
-WIP: 
-- Search Engine from Product Page
-- Product Model from the backend, Product Page (currently populated with static content)
-- Wishlist feature 
-- Product comment section
-- Email notification

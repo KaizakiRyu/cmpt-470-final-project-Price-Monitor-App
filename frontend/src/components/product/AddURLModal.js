@@ -120,7 +120,7 @@ class AddURLModal extends Component {
             this.props.history.push('/product/' + this.props.id);
             window.location.reload()
           }
-    
+  
           else {
             var errorMessage = [];
             // for (const [key, value] of Object.entries(response)) {

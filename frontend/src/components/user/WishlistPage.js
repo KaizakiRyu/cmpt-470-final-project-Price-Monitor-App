@@ -22,10 +22,8 @@ export default class WishlistPage extends Component {
 
     async getProductDetails() {
         var token = localStorage.getItem('token');
-        console.log("Token: " , token);
         if (token !== null){
             var response = await RequestServer.getWishlist(token)
-            console.log(response);
             if (response !== null){
 
                 for (var i in response.product_id_list) {

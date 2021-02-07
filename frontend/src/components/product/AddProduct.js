@@ -146,16 +146,16 @@ class AddProduct extends Component {
         // window.location.reload()
     }
 
-    addImageHandler = (event) => {
-        var file = event.currentTarget.files[0]
-        console.log(file)
-        this.setState(prevState => ({
-            product: {
-                ...prevState.product,
-                product_image: file
-            }
-        }))
-    }
+    // addImageHandler = (event) => {
+    //     var file = event.currentTarget.files[0]
+    //     console.log(file)
+    //     this.setState(prevState => ({
+    //         product: {
+    //             ...prevState.product,
+    //             product_image: file
+    //         }
+    //     }))
+    // }
 
     render(){
         return (
@@ -204,14 +204,14 @@ class AddProduct extends Component {
                             /> */}
                             <br/>
                             
-                            <TextField name = "Picture" >
+                            {/* <TextField name = "Picture" >
                                 <input 
                                     type="file" 
                                     name="file" 
                                     onChange={(event) => this.addImageHandler(event)}
                                     accept="image/gif, image/jpeg, image/png"
                                     />
-                            </TextField>
+                            </TextField> */}
                                 
                                 {/* 
                             </TextField> */}
