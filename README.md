@@ -98,7 +98,7 @@ http://www.marinamele.com/taskbuster-django-tutorial/install-and-configure-posgr
 Need to modify these file accordingly (uncomment and comment the correct line)before running production mode and vice versa
 - In /scraper/scraper/settings.py, change SPLASH_URL
 - In /scraper/scraper/piplines.py, change hostname
-- In /scraper/scraper/pricespider.py, change hostname
+- In /scraper/scraper/spiders/pricespider.py, change hostname
 - In /backend/backend/settings.py, change CELERY_BROKER_URL and CELERY_RESULT_BACKEND
 - In /backend/backend/settings.py, change HOST
 - In /backend/backend/settings.py, change DEBUG

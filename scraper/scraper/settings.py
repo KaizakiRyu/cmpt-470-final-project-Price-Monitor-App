@@ -58,8 +58,8 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy_splash.SplashMiddleware': 725,
     'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
 }
-SPLASH_URL = 'http://localhost:8050' #local testing
-# SPLASH_URL = 'http://splash:8050' #production mode
+# SPLASH_URL = 'http://localhost:8050' #local testing
+SPLASH_URL = 'http://splash:8050' #production mode
 # f = open('scraper/ip_config.txt')
 # import re, subprocess, os
 

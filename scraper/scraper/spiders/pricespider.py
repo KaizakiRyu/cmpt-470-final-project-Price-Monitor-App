@@ -51,8 +51,8 @@ class PricespiderSpider(scrapy.Spider):
         yield item
 
     def get_url_from_db(self):
-        hostname = 'localhost' # local testing
-        # hostname = 'db' # docker
+        # hostname = 'localhost' # local testing
+        hostname = 'db' # docker
         username = 'testuser'
         password = '123' # your password
         database = 'testdb'

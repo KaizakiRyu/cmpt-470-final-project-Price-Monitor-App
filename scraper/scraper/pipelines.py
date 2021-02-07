@@ -15,8 +15,8 @@ import psycopg2
 class ScraperPipeline:
 
     def open_spider(self, spider):
-        hostname = 'localhost' # local testing
-        # hostname = 'db' # docker
+        # hostname = 'localhost' # local testing
+        hostname = 'db' # docker
         username = 'testuser'
         password = '123' # your password
         database = 'testdb'
