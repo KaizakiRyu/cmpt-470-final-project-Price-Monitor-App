@@ -18,12 +18,10 @@ scrapyd-client = "*"
 python-scrapyd-api = "*"
 pillow = "*"
 bleach = "*"
+uwsgi = {version = "*", sys_platform = "!= 'win32'"}
+requests = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.8"
-
-[packages.uwsgi]
-version = "*"
-sys_platform = "!= 'win32'"
+python_version = "3.10"

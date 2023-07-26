@@ -27,24 +27,30 @@
 
 # Command for Running locally
 ## Prerequisite
-- python3
+- python (v.3.10)
 - pip
+    - Install via `sudo apt install python3-pip`
 - pipenv
+    - Install via `pip install pipenv`
+    - Will need to start new terminal for install to take effect. Otherwise, use pipenv cmds using `python3 -m pipenv`
 - node
+    - Install via `sudo apt install npm`
 - postgresql
+    - Install via `sudo apt-get install postgresql`
+    - CMD to check status of db `/etc/init.d/postgresql status`
 ## Setting up postgres db
-http://zetcode.com/springboot/postgresql/
+Reference: http://zetcode.com/springboot/postgresql/
 
-Go to this link to setup the postgresql with the following parameters
-
-Please only look at the postgresql section
-
-- user: testuser
+### Create user
+CMD: `sudo -u postgres createuser --interactive --password <username>`
+- username: testuser
 - Shall the new role be a superuser? (y/n) n
 - Shall the new role be allowed to create databases? (y/n) y
 - Shall the new role be allowed to create more new roles? (y/n) n
-- Password: 123  
-- db: testdb
+- Password: 123
+### Create db
+CMD: `sudo -u postgres createdb <dbname> -O <username>`
+- dbname: testdb
 
 If you are on mac links below would help you to setup your database too 
 (database name : testdb , user name : testuser ,Password: 123   )
@@ -53,7 +59,9 @@ http://www.marinamele.com/taskbuster-django-tutorial/install-and-configure-posgr
 
 ## Running backend
 - Open up a terminal in the project folder
-- Run command: `pipenv install` and `pipenv shell`
+- Run command: 
+    - `pipenv shell` to start virtual env
+    - `pipenv install` to install the necessary dependencies to the virtual env 
     - for mac users :  if you havent installed brew first run `pip3 install pipenv` then `brew install pipenv` 
 - cd to /backend/backend
 - Open `settings.py` and change the setting for the database (the steps are there)
