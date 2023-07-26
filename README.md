@@ -44,6 +44,7 @@ Reference: http://zetcode.com/springboot/postgresql/
 ### Create user
 CMD: `sudo -u postgres createuser --interactive --password <username>`
 - username: testuser
+
 The following prompts will pop up. Enter the value as shown below
 - Shall the new role be a superuser? (y/n) n
 - Shall the new role be allowed to create databases? (y/n) y
