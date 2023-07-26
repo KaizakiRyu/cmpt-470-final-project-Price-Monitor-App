@@ -45,7 +45,6 @@ Please only look at the postgresql section
 - Shall the new role be allowed to create more new roles? (y/n) n
 - Password: 123  
 - db: testdb
-- 
 
 If you are on mac links below would help you to setup your database too 
 (database name : testdb , user name : testuser ,Password: 123   )
